@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  
+<div id="app">
+<!-- <h2> Time: {{getCurrentTime()}}</h2> -->
+<p> Count:{{count}}</p>
+
+<button @click='increase($e,1)'> Increment1</button>
+<button @click='decrease(1)'> Decrement1</button>
+
+<br/><br/>
+<button @click='increase(2)'> Increment2</button>
+<button @click='decrease(2)'> Decrement2</button>
+
+
+<hr>
+
+<button @click='test'>Test</button>
+</div>
+
+
+
+
+<script>
+var app=Vue.createApp({
+  data(){
+    return{
+      count:0,
+    };
+  },
+  methods:{
+
+    increase(amount,e){
+      console.log(e.target);
+      this.count=this.count+amount;
+    },
+    decrease(amount){
+      this.count=this.count-amount;
+    },
+
+    test(e){
+      console.log(e.target);
+    }
+
+  }
+
+
+ 
+
+});
+
+app.mount('#app');
+</script>
+</body>
+</html>
