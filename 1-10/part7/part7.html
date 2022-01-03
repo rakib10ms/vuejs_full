@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+  <style>
+    .card{
+      height: 200px;
+      width: 200px;
+      background-color: antiquewhite;
+    }
+  </style>
+
+
+  
+<div id="app">
+
+  <form @submit.prevent="handleFormSubmit">
+  <h3> Enter Your Name</h3>
+  <input type="text" @keyup.enter="handleKeyUp"/>
+  <p>Wlcome {{name}}</p>
+
+  <button type="submit"> Ok</button>
+</form>
+
+ <hr>
+
+ <div class="card" @click="handleCardClick">
+  <button style="margin:20px"  @click.stop="handleViewClick"> View</button>
+ </div>
+
+</div>
+
+
+
+<script src="ap.js">
+
+</script>
+</body>
+</html>
